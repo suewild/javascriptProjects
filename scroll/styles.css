@@ -228,6 +228,8 @@ nav {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
+  z-index: 10;
+  display: inline-block;
 }
 .nav-toggle:hover {
   color: var(--clr-secondary);
@@ -365,7 +367,6 @@ footer p {
   border-radius: var(--radius);
   color: var(--clr-white);
   animation: bounce 2s ease-in-out infinite;
-
   visibility: hidden;
   z-index: -100;
 }
