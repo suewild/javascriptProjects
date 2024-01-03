@@ -29,9 +29,20 @@ const deadline = document.querySelector(".deadline");
 const giveaway = document.querySelector(".giveaway");
 const items = document.querySelectorAll(".deadline-format h4");
 
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth(); // ok to return a number
+let tempDay = tempDate.getDate();
+
+// Setting a specific future date for the countdown (using tempDate)
+// using tempDay + 10 for the 'day' argument
+// setting up future date to be 10 days in the future (e.g. 10 days from current date)
+// Format: year, month (0-indexed), day, hour, minutes, seconds
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
+
 // Setting a specific future date for the countdown.
 // Format: year, month (0-indexed), day, hour, minutes, seconds
-let futureDate = new Date(2024, 4, 24, 11, 30, 0);
+// let futureDate = new Date(2024, 4, 24, 11, 30, 0);
 
 // Extracting and formatting date components from the futureDate.
 const year = futureDate.getFullYear(); // Gets the year
